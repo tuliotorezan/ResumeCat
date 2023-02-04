@@ -3,7 +3,8 @@ import {useEffect, useState} from 'react';
 import M from 'materialize-css';
 import './Main.css';
 import Dynamiccv from '../Dynamiccv/Dynamiccv';
-import Intereducation from './Intereducation/Intereducation';
+import Intereducation from './Mycomponents/Intereducation';
+import Interwork from './Mycomponents/Interwork';
 
 
 const formSubmit = (event) => {
@@ -22,14 +23,16 @@ function Main({domain})
         <h3>CV Form</h3><br/>
         <label for="name">Your name</label><br/>
         <input type="text" id="name" name="name"/><br/><br/>
-        Education?
+        <strong>Your Educational Background</strong>
         <br/>
         <Intereducation/>
         <br/>
+        <br/>
+        <br/>
+        <p>hey I am some text yay</p>
+        <Interwork/>
         Awards: 
         <input type="text" name="awards"/><br/><br/>
-        Work Experience:
-        <input type="text" name="workExperience"/><br/><br/>
         Skills: 
         <input type="text" name="skills"/><br/><br/>
         <input type="submit"/>
