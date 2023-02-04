@@ -23,7 +23,9 @@ function Main({domain})
         <label for="name">Your name</label><br/>
         <input type="text" id="name" name="name"/><br/><br/>
         Education?
-        <input type="text" name="education"/><br/><br/>
+        <br/>
+        <Intereducation/>
+        <br/>
         Awards: 
         <input type="text" name="awards"/><br/><br/>
         Work Experience:
@@ -31,7 +33,7 @@ function Main({domain})
         Skills: 
         <input type="text" name="skills"/><br/><br/>
         <input type="submit"/>
-        <Intereducation/>
+        
         
     </form> 
 
