@@ -1,11 +1,20 @@
 import './App.css';
+import Dynamiccv from './components/Dynamiccv/Dynamiccv';
 import Main from './components/Main/Main';
 
 function App() {
   return (
-    <div className="App">
+    <>
+
+
+    <div className="Main">
      <Main/>
-    </div>
+     </div>
+     <div className="Dynamiccv">
+     <Dynamiccv/>
+     </div>
+
+    </>
   );
 }
 
