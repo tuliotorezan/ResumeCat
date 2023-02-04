@@ -17,30 +17,30 @@ function Intro(props)
 
             <div className='contact col s6 offset-s3 left-align'>
                 <div className='inline'>
-                    <i class="tiny material-icons">email</i>
+                    <i className="tiny material-icons">email</i>
                     <a>{data.email}</a>
                 </div>
                 <div className='inline'>
-                    <i class="tiny material-icons">phone</i>
+                    <i className="tiny material-icons">phone</i>
                     <a>{data.phone}</a>
                 </div>
                 <div className='inline'>
-                    <i class="tiny material-icons">open_in_new</i>
+                    <i className="tiny material-icons">open_in_new</i>
                     <a>{data.url}</a>
                 </div>
             </div>
 
             <div className='socials col s6 offset-s3 left-align'>
                 {data.profiles.map(e =>
-                    <div className='inline'>
+                    <div key={e.network} className='inline'>
                         <a>{e.url}</a>
                     </div>
                 )}
             </div>
 
-            <div class="col left-align s6 offset-s3">
-                <div class="card blue lighten-4">
-                    <div class="card-content black-text">
+            <div className="col left-align s6 offset-s3">
+                <div className="card blue lighten-4">
+                    <div className="card-content black-text">
                         <p>{data.summary}</p>
                     </div>
                 </div>

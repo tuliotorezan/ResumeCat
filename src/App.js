@@ -15,7 +15,7 @@ function App() {
     <>
     <div>
      <Intro data={jsonData.basics}/>
-     <Skills/>
+     <Skills data={jsonData.skills}/>
     </div>
 
     <div className="Main">
