@@ -2,10 +2,10 @@ import { useState } from 'react';
 import './App.css';
 import Awards from './Components/Awards/Awards';
 import Intro from './Components/Intro/Intro';
-import Main from './Components/Main/Main';
+import Skills from './Components/Skills/Skills';
 import data from "./Resume.json"
-import Dynamiccv from './components/Dynamiccv/Dynamiccv';
-import Main from './components/Main/Main';
+import Dynamiccv from './Components/Dynamiccv/Dynamiccv';
+import Main from './Components/Main/Main';
 
 function App() {
   const [jsonData, setData] = useState (data);
@@ -13,16 +13,17 @@ function App() {
   
   return (
     <>
-
+    <div>
+     <Intro data={jsonData.basics}/>
+     <Skills/>
+    </div>
 
     <div className="Main">
      <Main/>
-     <Intro data={jsonData.basics}/>
     </div>
      <div className="Dynamiccv">
      <Dynamiccv/>
      </div>
-
     </>
   );
 }
