@@ -1,11 +1,11 @@
 import 'materialize-css/dist/css/materialize.min.css'
 import { useState } from 'react'
 
-function Skills(props)
+function Skills({data})
 {
-    const advSkills = props.data.filter(e=>e.level==="Advanced")
-    const intmSkills = props.data.filter(e=>e.level==="Intermediate")
-    const basicSkills = props.data.filter(e=>e.level==="Basic")
+    const advSkills = data.filter(e=>e.level==="Advanced")
+    const intmSkills = data.filter(e=>e.level==="Intermediate")
+    const basicSkills = data.filter(e=>e.level==="Basic")
     return(
         <div className='section row'>
             <div className='col left-align s6 offset-s3'>

@@ -1,9 +1,8 @@
 import 'materialize-css/dist/css/materialize.min.css'
 import "./intro.css"
 
-function Intro(props)
+function Intro({data})
 {
-    const data = props.data;
     return(
         <header className='row'>
             <div className='col left-align s5 offset-s3'>
