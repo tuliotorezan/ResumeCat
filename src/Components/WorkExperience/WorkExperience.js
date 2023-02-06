@@ -4,7 +4,7 @@ function WorkExperience() {
     return (
         <div className='section row'>
             <div className='col left-align s6 offset-s3'>
-                <h6 className='sectionHead'>Skills</h6>
+                <h6 className='sectionHead'>Work Experience</h6>
 
             </div>
 

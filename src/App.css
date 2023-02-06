@@ -1,5 +1,28 @@
 .sectionHead{
     font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.headline{
+    font-size: 18px;
+}
+
+.skill-card{
+    margin-top: 4px;
+    margin-left: 8px;
+    border-radius: 3px;
+}
+
+.space{
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+
+.card-content{
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 2px;
+    font-size: 14px;
 }
 
 .sectionHead:after {
@@ -7,7 +30,7 @@
     display: inline-block;
     height: 0.5em;
     vertical-align: bottom;
-    width: 100%;
+    width: 94%;
     margin-right: -100%;
     margin-left: 10px;
     border-top: 2px solid grey;

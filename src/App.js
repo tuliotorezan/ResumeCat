@@ -10,7 +10,6 @@ import Main from './Components/Main/Main';
 function App() {
   const [jsonData, setData] = useState (data);
   
-  
   return (
     <>
     <div>
