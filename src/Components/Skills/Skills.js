@@ -9,12 +9,12 @@ function Skills({data})
     return(
         <div className='section row'>
             <div className='col left-align s6 offset-s3'>
-                <h6 className='sectionHead'>Skills</h6>
+                <h6 className='sectionHead'>SKILLS</h6>
                 <div className='col left-align s12'>
                     <div className='col s2 left-align headline'>
                         Advanced
                     </div>
-                    {advSkills.map(e=><div key={e.name} className="col skill-card teal lighten-3"><p className="card-content">{e.name}</p></div>)}
+                    {advSkills.map(e=><div key={e.name} className="col skill-card blue lighten-3"><p className="card-content">{e.name}</p></div>)}
                 </div>
 
                 <div className='divider grey col s12 space'></div>

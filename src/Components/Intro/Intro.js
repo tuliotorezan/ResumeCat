@@ -15,18 +15,12 @@ function Intro({ data }) {
                 </div>
 
                 <div className='col left-align s12 valign-wrapper'>
-                    <div className='inline valign-wrapper'>
-                        <i className="tiny material-icons">email</i>
-                        <a>{data.email}</a>
-                    </div>
-                    <div className='inline valign-wrapper'>
-                        <i className="tiny material-icons">phone</i>
-                        <a>{data.phone}</a>
-                    </div>
-                    <div className='inline valign-wrapper'>
-                        <i className="tiny material-icons">open_in_new</i>
+                        <i className="tiny material-icons icon">email</i>
+                        <a>{data.email}&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                        <i className="tiny material-icons icon">phone</i>
+                        <a>{data.phone}&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                        <i className="tiny material-icons icon">open_in_new</i>
                         <a className=''>{data.url}</a>
-                    </div>
                 </div>
 
                 <div className='socials col s12 left-align'>
