@@ -7,6 +7,7 @@ import data from "./Resume.json"
 import Dynamiccv from './Components/Dynamiccv/Dynamiccv';
 import Main from './Components/Main/Main';
 import WorkExperience from './Components/WorkExperience/WorkExperience';
+import Education from './Components/Education/Education';
 
 function App() {
   const [jsonData, setData] = useState (data);
@@ -17,6 +18,7 @@ function App() {
      <Intro data={jsonData.basics}/>
      <Skills data={jsonData.skills}/>
      <WorkExperience data={jsonData.work}/>
+     <Education data={jsonData.education}/>
     </div>
 
     <div className="Main">
