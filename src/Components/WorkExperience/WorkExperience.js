@@ -8,8 +8,8 @@ function WorkExperience({ data }) {
                 {data.map(job =>
                     <>
                         <div className='col left-align s12'>
-                            <div className='col s6 jobTitle'><h6>{job.position} | {job.name}</h6></div>
-                            <div className='col s6 jobDates right-align'><h6>{job.startDate} - {job.endDate}</h6></div>
+                            <div className='col s6'><h6 className='inline jobTitle'>{job.position}</h6><h6 className='inline jobCompany'>|&nbsp; {job.name}</h6></div>
+                            <div className='col s6 right-align'><h6 className='jobDates'>{job.startDate} - {job.endDate}</h6></div>
                         </div>
 
                         <div className='col left-align s12'>
