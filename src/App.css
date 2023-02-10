@@ -1,5 +1,38 @@
 .sectionHead{
+    color: #ff7043;
     font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.headline{
+    font-size: 18px;
+}
+
+.skill-card{
+    margin-top: 4px;
+    margin-left: 8px;
+    border-radius: 3px;
+}
+
+.space{
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+
+
+.card-content{
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 2px;
+    font-size: 14px;
+}
+
+.icon{
+    padding-top: 3px;
+}
+
+.inline{
+    display: inline-block;
 }
 
 .sectionHead:after {
@@ -11,4 +44,17 @@
     margin-right: -100%;
     margin-left: 10px;
     border-top: 2px solid grey;
+  }
+
+  .jobTitle, .eduTitle{
+    font-weight: bold;
+    color: #424242
+  }
+
+  .jobCompany, .eduInstitution{
+    color: #757575
+  }
+
+  .jobDates, .eduDates{
+    font-weight: bold;
   }

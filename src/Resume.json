@@ -75,7 +75,23 @@
     }],
     "skills": [{
       "name": "Web Development",
-      "level": "Master",
+      "level": "Advanced",
+      "keywords": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ]
+    },{
+      "name": "Python",
+      "level": "Advanced",
+      "keywords": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ]
+    },{
+      "name": "Web Development",
+      "level": "Basic",
       "keywords": [
         "HTML",
         "CSS",
