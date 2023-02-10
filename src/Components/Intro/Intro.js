@@ -4,7 +4,7 @@ import "./intro.css"
 function Intro({ data }) {
     return (
         <header className='row'>
-            <div className='col s6 offset-s3'>
+            <div className='col s12'>
                 <div className='col left-align s10'>
                     <h4>{data.name}</h4>
                     <h5>{data.label}</h5>

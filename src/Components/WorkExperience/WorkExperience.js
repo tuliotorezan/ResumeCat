@@ -3,12 +3,12 @@ import 'materialize-css/dist/css/materialize.min.css'
 function WorkExperience({ data }) {
     return (
         <div className='section row'>
-            <div className='col left-align s6 offset-s3'>
+            <div className='col left-align s12'>
                 <h6 className='sectionHead'>WORK EXPERIENCE</h6>
                 {data.map(job =>
                         <div key={job.position + job.name} className='col left-align s12'>
-                            <div className='col s9'><h6 className='inline jobTitle'>{job.position}</h6><h6 className='inline jobCompany'>|&nbsp; {job.name}</h6></div>
-                            <div className='col s3 right-align'><h6 className='jobDates'>{job.startDate} - {job.endDate}</h6></div>
+                            <div className='col s8'><h6 className='inline jobTitle'>{job.position}</h6><h6 className='inline jobCompany'>|&nbsp; {job.name}</h6></div>
+                            <div className='col s4 right-align'><h6 className='jobDates'>{job.startDate} - {job.endDate}</h6></div>
 
                             <div className='col left-align s12 valign-wrapper'>
                                 <i className="tiny material-icons icon">open_in_new</i>

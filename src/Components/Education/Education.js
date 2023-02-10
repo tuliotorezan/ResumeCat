@@ -4,12 +4,12 @@ function Education({data})
 {
     return(
         <div className='section row'>
-            <div className='col left-align s6 offset-s3'>
+            <div className='col left-align s12'>
                 <h6 className='sectionHead'>EDUCATION</h6>
                 {data.map(edu =>
                         <div key={edu.area + edu.institution} className='col left-align s12'>
-                            <div className='col s9'><h6 className='inline eduTitle'>{edu.studyType} {edu.area}</h6><h6 className='inline eduInstitution'>|&nbsp; {edu.institution}</h6></div>
-                            <div className='col s3 right-align'><h6 className='eduDates'>{edu.startDate} - {edu.endDate}</h6></div>
+                            <div className='col s8'><h6 className='inline eduTitle'>{edu.studyType} {edu.area}</h6><h6 className='inline eduInstitution'>|&nbsp; {edu.institution}</h6></div>
+                            <div className='col s4 right-align'><h6 className='eduDates'>{edu.startDate} - {edu.endDate}</h6></div>
                         </div>
                 )}
             </div>

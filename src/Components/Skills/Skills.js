@@ -8,7 +8,7 @@ function Skills({data})
     const basicSkills = data.filter(e=>e.level==="Basic")
     return(
         <div className='section row'>
-            <div className='col left-align s6 offset-s3'>
+            <div className='col left-align s12'>
                 <h6 className='sectionHead'>SKILLS</h6>
                 <div className='col left-align s12'>
                     <div className='col s2 left-align headline'>
