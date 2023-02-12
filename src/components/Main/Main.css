@@ -6,4 +6,16 @@ body {
     align-items: center;
     justify-content: center;
     background-color: blanchedalmond;
+    
 }
+
+.inputzone {
+    /* font-family: 'Share Tech Mono', monospace; */
+}
+
+label {
+    font-size: 1.3rem;
+    color: black;
+}
+
+.adam{background-color: yellow;}

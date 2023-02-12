@@ -4,7 +4,6 @@ import Awards from './Components/Awards/Awards';
 import Intro from './Components/Intro/Intro';
 import Skills from './Components/Skills/Skills';
 import data from "./Resume.json"
-import Dynamiccv from './Components/Dynamiccv/Dynamiccv';
 import Main from './Components/Main/Main';
 import WorkExperience from './Components/WorkExperience/WorkExperience';
 import Education from './Components/Education/Education';
@@ -19,9 +18,7 @@ function App() {
           <div className="Main">
             <Main />
           </div>
-          <div className="Dynamiccv">
-            <Dynamiccv />
-          </div>
+
         </div>
 
         <div className='col s6 white'>

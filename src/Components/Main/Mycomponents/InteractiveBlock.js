@@ -1,60 +1,56 @@
-import M from 'materialize-css';
 import React, { useState, useEffect  } from 'react';
-
+import Intereducation from './Intereducation';
+export default InteractiveBlock;
 
 function InteractiveBlock(props) {
-    return(
-        <>
-        <br/>
-        <p> Work {props.no+1}</p>
-        <label for="name">Workplace Name</label><br/>
-        <input type="text" id="name" name="name"/><br/><br/>
-        <label for="name">Position</label><br/>
-        <input type="text" id="name" name="name"/><br/><br/>
-        <label for="name">Dates</label><br/>
-        <input type="text" id="name" name="name"/><br/><br/>
-        <label for="name">Description</label><br/>
-        <input type="text" id="name" name="name"/><br/><br/>
-        
-        </>
+    const toRender = props.type;
+    
+    switch(toRender) {
+        case "personal":
+          return(<BLK_Personal/>);
+        case "education":
+          return(<Intereducation/>);
+        case "experience":
+          return("Goodbye");
+        case "skills":
+          return("Goodbye");
+        case "languages":
+          return("Goodbye");
+        case "projects":
+          return("Goodbye");
+        default:
+          return("Please refresh the page.");
+      }
 
-    )
 }
 
+function BLK_Personal() {
+  return(
+      <>
+<form>
+      <label>What is your name?</label><br/>
+      <input type="text" name="name" placeholder="Purrito Cat"></input><br/>
+      <label>Your title:</label>
+      <input type="text" name="title" placeholder="Box Inspector"></input><br/>
+      <label>Address Information:</label>
+      <input type="text" name="address" placeholder="Cattown, New Meowia"></input><br/>
+      <label>Email:</label>
+      <input type="email" name="email" placeholder="purrito@meow.cat"></input><br/>
+      <label>Phone Number:</label><br/>
+      <input type="tel" name="phoneNumber" placeholder="9025555555"></input><br/>
+      <label>Personal Website:</label>
+      <input type="url" name="personalWebsite"></input><br/>
+      <label for="description">Description:</label><br/>  
+      <textarea id="description" rows='5' cols='40'></textarea><br/>  
+      <input type='submit' value='Submit'/>  
+ </form> 
+      </>
 
-function Interwork({domain})
-{    
-    const [count, setCount] = useState(1);
-    
-    useEffect(()=>{
-        console.log("hey")
-    },[count])
-    
-    let rows = [];
-
-    for (let i = 0; i < count; i++) {
-        rows.push(<Miniwork no={i}/>);
-    }
-
-    
-   
-    return(
-        <>
-        {rows}
-        <button onClick={() => setCount(count + 1)}>
-          New work experience
-        </button>
-        <button onClick={() => {if (count != 1) {setCount(count -1)}}}>
-        Remove work experience
-        </button>
-        </>
-    )
-
-
-
+  )
 }
 
 
 
-export default Interwork;
+
+
 

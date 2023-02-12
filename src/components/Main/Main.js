@@ -1,10 +1,9 @@
 //add a state called users. 
 import {useEffect, useState} from 'react';
-import M from 'materialize-css';
 import './Main.css';
-import Dynamiccv from '../Dynamiccv/Dynamiccv';
 import Intereducation from './Mycomponents/Intereducation';
 import Interwork from './Mycomponents/Interwork';
+import InteractiveBlock from './Mycomponents/InteractiveBlock';
 
 
 const formSubmit = (event) => {
@@ -18,14 +17,25 @@ function Main({domain})
 {    
     return(
     <>
-        <form onSubmit={formSubmit}>
-        <h1 className="header center blue-text">Resume.cat 🐱</h1>
+    <h1 className="header center red-text">Resume.cat 🐱</h1>
+    <p className="center black-text">I will help you create you a <strong>real</strong> resume step by step!</p> 
+    <br/>
+    <div className = "inputzone">
+        <InteractiveBlock type="personal"/>
+        <InteractiveBlock type="education"/>
+        <InteractiveBlock type="experience"/>
+        <InteractiveBlock type="skills"/>
+        <InteractiveBlock type="languages"/>
+        <InteractiveBlock type="projects"/>
+    </div>
+
+        {/* <form onSubmit={formSubmit}>
+        
         <h3>CV Form</h3><br/>
         <label for="name">Your name</label><br/>
         <input type="text" id="name" name="name"/><br/><br/>
         <strong>Your Educational Background</strong>
         <br/>
-        <Intereducation/>
         <br/>
         <br/>
         <br/>
@@ -38,7 +48,7 @@ function Main({domain})
         <input type="submit"/>
         
         
-    </form> 
+    </form>  */}
 
     
            
