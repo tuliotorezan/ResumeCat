@@ -1,6 +1,3 @@
-
-
-
 body {
     display: flex;
     align-items: center;
@@ -18,4 +15,14 @@ label {
     color: black;
 }
 
-.adam{background-color: yellow;}
+.adam {background-color: yellow;}
+
+::placeholder {
+    color: rgba(34, 46, 137, 0.5);
+    opacity: 1;
+  }
+
+  .basicBox {
+    padding: 10px;
+    border: 2px black dotted;
+  }
