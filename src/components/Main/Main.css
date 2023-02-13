@@ -24,5 +24,16 @@ label {
 
   .basicBox {
     padding: 10px;
-    border: 2px black dotted;
+  }
+
+  #nameBox {
+    background-color: #D4CAB1;
+  }
+
+  #titleBox {
+    background-color: #E17D5A;
+  }
+
+  #addressBox {
+    background-color: #B5A157;
   }

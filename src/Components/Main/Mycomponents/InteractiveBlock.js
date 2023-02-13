@@ -33,22 +33,29 @@ function BLK_Personal() {
   return(
       <>
 <form>
-      <div className='basicBox'>
+      <div className="basicBox" id ="nameBox">
       <label>What is your name?</label><br/>
       <input type="text" name="name" placeholder="Purrito Cat"></input><br/>
       </div>
-      <label>Your title:</label>
+      <div className="basicBox" id ="titleBox">
+      <label>Do you have a career title? </label>
+      <button onClick={()=>set_phoneWanted(0)}>🗑️</button>
       <input type="text" name="title" placeholder="Box Inspector"></input><br/>
-      <label>Address Information:</label>
+      </div>
+      <div className="basicBox" id ="addressBox">
+      <label>Address Information: </label>
+      <button onClick={()=>set_phoneWanted(0)}>🗑️</button>
       <input type="text" name="address" placeholder="Cattown, New Meowia"></input><br/>
+      </div>
       <label>Email:</label>
       <input type="email" name="email" placeholder="purrito@meow.cat"></input><br/>
       
       {phoneWanted ? 
       <>
-      <label>Phone Number:</label><br/>
+      <label>Phone Number? </label>
+      <button onClick={()=>set_phoneWanted(0)}>Remove</button>
       <input type="tel" name="phoneNumber" placeholder="9025555555"></input><br/>
-      <button onClick={()=>set_phoneWanted(0)}>📞 Remove phone number</button>
+  
       <br/>
       </>
       : 

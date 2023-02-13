@@ -17,7 +17,7 @@ function Main({domain})
 {    
     return(
     <>
-    <h1 className="header center red-text">Resume.cat 🐱</h1>
+    <h1 className="header center purple-text">Resume.cat 🐈</h1>
     <p className="center black-text">I will help you create you a <strong>real</strong> resume step by step!</p> 
     <br/>
     <div className = "inputzone">
