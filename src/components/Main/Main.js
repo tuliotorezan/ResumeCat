@@ -1,17 +1,9 @@
 //add a state called users. 
 import {useEffect, useState} from 'react';
 import './Main.css';
-import Intereducation from './Mycomponents/Intereducation';
 import Interwork from './Mycomponents/Interwork';
 import InteractiveBlock from './Mycomponents/InteractiveBlock';
 
-
-const formSubmit = (event) => {
-    event.preventDefault();
-    var data = new FormData(event.target);
-    let formObject = Object.fromEntries(data.entries());
-    console.log(formObject);
-  }
 
 function Main({domain})
 {    
@@ -25,8 +17,8 @@ function Main({domain})
         <InteractiveBlock type="education"/>
         <InteractiveBlock type="experience"/>
         <InteractiveBlock type="skills"/>
-        <InteractiveBlock type="languages"/>
-        <InteractiveBlock type="projects"/>
+        {/* Unused Yet <InteractiveBlock type="languages"/> */}
+        
     </div>
 
         {/* <form onSubmit={formSubmit}>

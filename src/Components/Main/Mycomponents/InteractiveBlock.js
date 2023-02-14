@@ -9,20 +9,27 @@ function InteractiveBlock(props) {
         case "personal":
           return(<BLK_PERSONAL/>);
         case "education":
-          return(<BLK_EDUCATION/>);
+          return(<BLK_MULTILAYERED unit={Unit_Education}/>);
         case "experience":
-          return("Goodbye");
+          return(<BLK_MULTILAYERED unit={Unit_Experience}/>);
         case "skills":
-          return("Goodbye");
+          return(<BLK_MULTILAYERED unit={Unit_Skills}/>);
         case "languages":
-          return("Goodbye");
-        case "projects":
-          return("Goodbye");
+          return(<BLK_MULTILAYERED unit={Unit_Languages}/>);
         default:
           return("Please refresh the page.");
       }
 
 }
+
+
+const scr_formSubmit = (event) => {
+  event.preventDefault();
+  var data = new FormData(event.target);
+  let formObject = Object.fromEntries(data.entries());
+  console.log(formObject);
+}
+
 
 function BLK_PERSONAL() {      
     //Set variables for the optional sections
@@ -116,7 +123,7 @@ function BLK_PERSONAL() {
      
       <div className="basicBox">
       <br/>
-      <label for="description">Talk about yourself!</label><br/>  
+      <label htmlFor="description">Talk about yourself!</label><br/>  
       <textarea id="description" rows='5' cols='40' placeholder='I am a cat.'></textarea><br/>  
       </div>
  </form> 
@@ -125,8 +132,10 @@ function BLK_PERSONAL() {
   )
 }
 
-function BLK_EDUCATION()
+function BLK_MULTILAYERED(props)
 {    
+
+
   const [count, setCount] = useState(1);
   
   useEffect(()=>{
@@ -136,17 +145,17 @@ function BLK_EDUCATION()
   let rows = [];
 
   for (let i = 0; i < count; i++) {
-      rows.push(<Unit_Education no={i}/>);
+      rows.push(<props.unit no={i}/>);
   }
  
   return(
       <>
       {rows}
       <button onClick={() => setCount(count + 1)}>
-        Add Education!
+        Add More
       </button>
       <button onClick={() => {if (count != 1) {setCount(count -1)}}}>
-        Remove Education!
+        Remove
       </button>
       </>
   )
@@ -160,13 +169,13 @@ function Unit_Education(props) {
       <>
       <br/>
       <h6><strong>Any degrees, diplomas or certificates? (Credential {props.no+1})</strong></h6>
-      <label for="name">Institution Name</label><br/>
+      <label htmlFor="name">Institution Name</label><br/>
       <input type="text" id="name" name="name"/><br/><br/>
-      <label for="name">Study Field</label><br/>
+      <label htmlFor="name">Study Field</label><br/>
       <input type="text" id="name" name="name"/><br/><br/>
-      <label for="name">Study Tier</label><br/>
+      <label htmlFor="name">Study Tier</label><br/>
       <input type="text" id="name" name="name"/><br/><br/>
-      <label for="name">Details</label><br/>
+      <label htmlFor="name">Details</label><br/>
       <input type="text" id="name" name="name"/><br/><br/>
       
       </>
@@ -174,5 +183,52 @@ function Unit_Education(props) {
   )
 }
 
+function Unit_Experience(props) {
+  return(
+      <>
+      <br/>
+      <h6><strong>Do you have any previous work experience? (Work {props.no+1})</strong></h6>
+      <label htmlFor="name">Position</label><br/>
+      <input type="text" id="name" name="name"/><br/><br/>
+      <label htmlFor="name">Company Name</label><br/>
+      <input type="text" id="name" name="name"/><br/><br/>
+      <label htmlFor="name">Starting Date</label><br/>
+      <input type="text" id="name" name="name"/><br/><br/>
+      <label htmlFor="name">Ending Date</label><br/>
+      <input type="text" id="name" name="name"/><br/><br/>
+      <label htmlFor="name">Details</label><br/>
+      <input type="text" id="name" name="name"/><br/><br/>
+      
+      </>
 
+  )
+}
+
+function Unit_Skills(props) {
+  return(
+      <>
+      <br/>
+      <h6><strong>Tell me about a skill of yours! (Skill {props.no+1})</strong></h6>
+      <label htmlFor="name">Skill Name</label><br/>
+      <input type="text" id="name" name="name"/><br/><br/>
+      <label htmlFor="name">Your Level</label><br/>
+      <input type="text" id="name" name="name"/><br/><br/>
+
+      </>
+
+  )
+}
+
+function Unit_Languages(props) {
+  return(
+      <>
+      <br/>
+      <h6><strong>What languages can you speak? (Language {props.no+1})</strong></h6>
+      <label htmlFor="name">Language Name</label><br/>
+      <input type="text" id="name" name="name"/><br/><br/>
+      
+      </>
+
+  )
+}
 
