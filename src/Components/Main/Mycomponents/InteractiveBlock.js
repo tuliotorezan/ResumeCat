@@ -1,7 +1,5 @@
 import React, { useState, useEffect  } from 'react';
-import Intereducation from './Intereducation';
 export default InteractiveBlock;
-
 function InteractiveBlock(props) {
 
     //Convert props to individual variables
@@ -11,7 +9,7 @@ function InteractiveBlock(props) {
         case "personal":
           return(<BLK_PERSONAL/>);
         case "education":
-          return(<Intereducation/>);
+          return(<BLK_EDUCATION/>);
         case "experience":
           return("Goodbye");
         case "skills":
@@ -31,14 +29,13 @@ function BLK_PERSONAL() {
     const [option_title, set_option_title] = useState(true);
     const [option_address, set_option_address] = useState(true);
     const [option_mail, set_option_mail] = useState(true);
-    const [option_web, set_option_web] = useState(true);
     const [option_phone, set_option_phone] = useState(true);
+    const [option_website, set_option_website] = useState(true);
     
 
   return(
       <>
 <form>
-
       <div className="basicBox" id ="nameBox">
       <label>What is your name?</label><br/>
       <input type="text" name="name" placeholder="Purrito Cat"></input><br/>
@@ -72,11 +69,21 @@ function BLK_PERSONAL() {
       <br/>
       </>}
 
-
+      
+      {option_mail ? 
+      <>
       <div className="basicBox" id ="mailBox">
-      <label>Email:</label>
+      <label>Your e-mail? </label>
+      <button onClick={()=>set_option_mail(false)}>🗑️</button>
       <input type="email" name="email" placeholder="purrito@meow.cat"></input><br/>
       </div>
+      </>
+      : 
+      <>
+      <button onClick={()=>set_option_mail(true)}>Add Mail</button>
+      <br/>
+      </>}
+
 
       {option_phone ? 
       <>
@@ -85,27 +92,87 @@ function BLK_PERSONAL() {
       <button onClick={()=>set_option_phone(0)}>🗑️</button>
       <input type="tel" name="phoneNumber" placeholder="9025555555"></input><br/>
       </div>
-      <br/>
       </>
       : 
       <>
       <button onClick={()=>set_option_phone(1)}>📞 Add phone number</button>
+      </>}
+
+      {option_website ? 
+      <>
+      <div className="basicBox" id ="siteBox">
+      <label>Do you want to add a website link? </label>
+      <button onClick={()=>set_option_website(0)}>🗑️</button>
+      <input type="url" name="personalWebsite" placeholder="You can leave this area empty."></input><br/>
+      </div>
+      </>
+      : 
+      <>
+      <button onClick={()=>set_option_website(true)}>Add Website</button>
       <br/>
       </>}
 
-      <label>Personal Website:</label>
-      <input type="url" name="personalWebsite"></input><br/>
-      <label for="description">Description:</label><br/>  
-      <textarea id="description" rows='5' cols='40'></textarea><br/>  
-      <input type='submit' value='Submit'/>  
+    
+     
+      <div className="basicBox">
+      <br/>
+      <label for="description">Talk about yourself!</label><br/>  
+      <textarea id="description" rows='5' cols='40' placeholder='I am a cat.'></textarea><br/>  
+      </div>
  </form> 
       </>
 
   )
 }
 
+function BLK_EDUCATION()
+{    
+  const [count, setCount] = useState(1);
+  
+  useEffect(()=>{
+      console.log("hey")
+  },[count])
+  
+  let rows = [];
+
+  for (let i = 0; i < count; i++) {
+      rows.push(<Unit_Education no={i}/>);
+  }
+ 
+  return(
+      <>
+      {rows}
+      <button onClick={() => setCount(count + 1)}>
+        Add Education!
+      </button>
+      <button onClick={() => {if (count != 1) {setCount(count -1)}}}>
+        Remove Education!
+      </button>
+      </>
+  )
 
 
+
+}
+
+function Unit_Education(props) {
+  return(
+      <>
+      <br/>
+      <h6><strong>Any degrees, diplomas or certificates? (Credential {props.no+1})</strong></h6>
+      <label for="name">Institution Name</label><br/>
+      <input type="text" id="name" name="name"/><br/><br/>
+      <label for="name">Study Field</label><br/>
+      <input type="text" id="name" name="name"/><br/><br/>
+      <label for="name">Study Tier</label><br/>
+      <input type="text" id="name" name="name"/><br/><br/>
+      <label for="name">Details</label><br/>
+      <input type="text" id="name" name="name"/><br/><br/>
+      
+      </>
+
+  )
+}
 
 
 

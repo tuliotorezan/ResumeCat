@@ -14,19 +14,19 @@ function App() {
   return (
     <>
       <div className='row'>
-        <div className='col s6'>
+        <div className='col s5 leftArea'>
           <div className="Main">
             <Main />
           </div>
-
         </div>
 
-        <div className='col s6 white'>
+        <div className='col s7 white' >
           <Intro data={jsonData.basics} />
           <Skills data={jsonData.skills} />
           <WorkExperience data={jsonData.work} />
           <Education data={jsonData.education} />
         </div>
+      
       </div>
     </>
   );
