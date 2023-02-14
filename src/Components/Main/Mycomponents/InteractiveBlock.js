@@ -9,7 +9,7 @@ function InteractiveBlock(props) {
     
     switch(toRender) {
         case "personal":
-          return(<BLK_Personal/>);
+          return(<BLK_PERSONAL/>);
         case "education":
           return(<Intereducation/>);
         case "experience":
@@ -26,41 +26,70 @@ function InteractiveBlock(props) {
 
 }
 
-function BLK_Personal() {      
-    //Set variables for user requests for certain sections
-    const [phoneWanted, set_phoneWanted] = useState(0);
+function BLK_PERSONAL() {      
+    //Set variables for the optional sections
+    const [option_title, set_option_title] = useState(true);
+    const [option_address, set_option_address] = useState(true);
+    const [option_mail, set_option_mail] = useState(true);
+    const [option_web, set_option_web] = useState(true);
+    const [option_phone, set_option_phone] = useState(true);
+    
 
   return(
       <>
 <form>
+
       <div className="basicBox" id ="nameBox">
       <label>What is your name?</label><br/>
       <input type="text" name="name" placeholder="Purrito Cat"></input><br/>
       </div>
+
+      {option_title ? 
+      <>
       <div className="basicBox" id ="titleBox">
       <label>Do you have a career title? </label>
-      <button onClick={()=>set_phoneWanted(0)}>🗑️</button>
+      <button onClick={()=>set_option_title(0)}>🗑️</button>
       <input type="text" name="title" placeholder="Box Inspector"></input><br/>
       </div>
+      </>
+      : 
+      <>
+      <button onClick={()=>set_option_title(1)}>Add title</button>
+      <br/>
+      </>}
+
+      {option_address ? 
+      <>
       <div className="basicBox" id ="addressBox">
-      <label>Address Information: </label>
-      <button onClick={()=>set_phoneWanted(0)}>🗑️</button>
+      <label>Your address? </label>
+      <button onClick={()=>set_option_address(false)}>🗑️</button>
       <input type="text" name="address" placeholder="Cattown, New Meowia"></input><br/>
       </div>
+      </>
+      : 
+      <>
+      <button onClick={()=>set_option_address(true)}>Add Address</button>
+      <br/>
+      </>}
+
+
+      <div className="basicBox" id ="mailBox">
       <label>Email:</label>
       <input type="email" name="email" placeholder="purrito@meow.cat"></input><br/>
-      
-      {phoneWanted ? 
+      </div>
+
+      {option_phone ? 
       <>
+      <div className="basicBox" id ="phoneBox">
       <label>Phone Number? </label>
-      <button onClick={()=>set_phoneWanted(0)}>Remove</button>
+      <button onClick={()=>set_option_phone(0)}>🗑️</button>
       <input type="tel" name="phoneNumber" placeholder="9025555555"></input><br/>
-  
+      </div>
       <br/>
       </>
       : 
       <>
-      <button onClick={()=>set_phoneWanted(1)}>📞 Add phone number</button>
+      <button onClick={()=>set_option_phone(1)}>📞 Add phone number</button>
       <br/>
       </>}
 

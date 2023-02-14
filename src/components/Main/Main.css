@@ -1,9 +1,5 @@
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: blanchedalmond;
-    
 }
 
 .inputzone {
@@ -15,25 +11,54 @@ label {
     color: black;
 }
 
-.adam {background-color: yellow;}
-
 ::placeholder {
     color: rgba(34, 46, 137, 0.5);
     opacity: 1;
   }
 
-  .basicBox {
-    padding: 10px;
+
+  button {
+    text-align: center;
+    margin: auto;
   }
 
-  #nameBox {
-    background-color: #D4CAB1;
-  }
+  /* Boxes and Colours */
+    .basicBox {
+      padding: 10px;
+    }
 
-  #titleBox {
-    background-color: #E17D5A;
-  }
+    #nameBox {
+      background-color: #D4CAB1;
+    }
 
-  #addressBox {
-    background-color: #B5A157;
-  }
+    #titleBox {
+      background-color: #E17D5A;
+    }
+
+    #addressBox {
+      background-color: #B5A157;
+    }
+
+    #mailBox {
+      background-color: #57894E;
+    }
+
+    #phoneBox {
+      background-color: #D4CAB1;
+    }
+
+    #siteBox {
+      background-color: #B5A157;
+    }
+
+    #descBox {
+      background-color: #B5A157;
+    }
+
+    #eduBox {
+      background-color: #B5A157;
+    }
+
+    #workBox {
+      background-color: #B5A157;
+    }
