@@ -9,7 +9,7 @@ function Main({domain})
 {    
     return(
     <>
-    <h1 className="header center purple-text">Resume.cat 🐈</h1>
+    <h1 className="header center red-text" id="catTitle">Resume.cat 🐈</h1>
     <p className="center black-text">I will help you create you a <strong>real</strong> resume step by step!</p> 
     <br/>
     <div className = "inputzone">
@@ -20,6 +20,8 @@ function Main({domain})
         {/* Unused Yet <InteractiveBlock type="languages"/> */}
         
     </div>
+        <br/>
+        <button>Create my resume!</button>
 
         {/* <form onSubmit={formSubmit}>
         

@@ -1,8 +1,14 @@
 body {
     background-color: #ccd3db;
+
+}
+
+#catTitle {
+  font-family: 'Lilita One', cursive;
 }
 
 .inputzone {
+  font-family: 'Lilita One', cursive;
     /* font-family: 'Share Tech Mono', monospace; */
 }
 
