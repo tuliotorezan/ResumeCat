@@ -45,7 +45,7 @@ function BLK_PERSONAL() {
 <form>
       <div className="basicBox" id ="nameBox">
       <label>What is your name?</label><br/>
-      <input type="text" name="name" placeholder="Purrito Cat"></input><br/>
+      <input type="text" name="name" placeholder="Purrito Cat" id="dynval_name"></input><br/>
       </div>
 
       {option_title ? 
@@ -53,7 +53,7 @@ function BLK_PERSONAL() {
       <div className="basicBox" id ="titleBox">
       <label>Do you have a career title? </label>
       <button onClick={()=>set_option_title(0)}>🗑️</button>
-      <input type="text" name="title" placeholder="Box Inspector"></input><br/>
+      <input type="text" name="title" placeholder="Box Inspector" id="dynval_title"></input><br/>
       </div>
       </>
       : 
@@ -67,7 +67,7 @@ function BLK_PERSONAL() {
       <div className="basicBox" id ="addressBox">
       <label>Your address? </label>
       <button onClick={()=>set_option_address(false)}>🗑️</button>
-      <input type="text" name="address" placeholder="Cattown, New Meowia"></input><br/>
+      <input type="text" name="address" placeholder="Cattown, New Meowia" id="dynval_address"></input><br/>
       </div>
       </>
       : 
@@ -82,7 +82,7 @@ function BLK_PERSONAL() {
       <div className="basicBox" id ="mailBox">
       <label>Your e-mail? </label>
       <button onClick={()=>set_option_mail(false)}>🗑️</button>
-      <input type="email" name="email" placeholder="purrito@meow.cat"></input><br/>
+      <input type="email" name="email" placeholder="purrito@meow.cat" id="dynval_email"></input><br/>
       </div>
       </>
       : 
@@ -97,7 +97,7 @@ function BLK_PERSONAL() {
       <div className="basicBox" id ="phoneBox">
       <label>Phone Number? </label>
       <button onClick={()=>set_option_phone(0)}>🗑️</button>
-      <input type="tel" name="phoneNumber" placeholder="9025555555"></input><br/>
+      <input type="tel" name="phoneNumber" placeholder="9025555555" id="dynval_phone"></input><br/>
       </div>
       </>
       : 
@@ -110,7 +110,7 @@ function BLK_PERSONAL() {
       <div className="basicBox" id ="siteBox">
       <label>Do you want to add a website link? </label>
       <button onClick={()=>set_option_website(0)}>🗑️</button>
-      <input type="url" name="personalWebsite" placeholder="You can leave this area empty."></input><br/>
+      <input type="url" name="personalWebsite" placeholder="You can leave this area empty." id="dynval_website"></input><br/>
       </div>
       </>
       : 
@@ -123,8 +123,8 @@ function BLK_PERSONAL() {
      
       <div className="basicBox">
       <br/>
-      <label htmlFor="description">Talk about yourself!</label><br/>  
-      <textarea id="description" rows='5' cols='40' placeholder='I am a cat.'></textarea><br/>  
+      <label htmlFor="dynval_desc">Talk about yourself!</label><br/>  
+      <textarea id="dynval_desc" rows='5' cols='40' placeholder='I am a cat.' ></textarea><br/>  
       </div>
  </form> 
       </>
@@ -170,13 +170,13 @@ function Unit_Education(props) {
       <br/>
       <h6><strong>Any degrees, diplomas or certificates? (Credential {props.no+1})</strong></h6>
       <label htmlFor="name">Institution Name</label><br/>
-      <input type="text" id="name" name="name"/><br/><br/>
+      <input type="text" id="dynvar_edu_school" name="name"/><br/><br/>
       <label htmlFor="name">Study Field</label><br/>
-      <input type="text" id="name" name="name"/><br/><br/>
+      <input type="text" id="dynvar_edu_field" name="name"/><br/><br/>
       <label htmlFor="name">Study Tier</label><br/>
-      <input type="text" id="name" name="name"/><br/><br/>
+      <input type="text" id="dynvar_edu_tier" name="name"/><br/><br/>
       <label htmlFor="name">Details</label><br/>
-      <input type="text" id="name" name="name"/><br/><br/>
+      <input type="text" id="dynvar_edu_details" name="name"/><br/><br/>
       
       </>
 
@@ -189,15 +189,15 @@ function Unit_Experience(props) {
       <br/>
       <h6><strong>Do you have any previous work experience? (Work {props.no+1})</strong></h6>
       <label htmlFor="name">Position</label><br/>
-      <input type="text" id="name" name="name"/><br/><br/>
+      <input type="text" id="dynvar_exp_position" name="name"/><br/><br/>
       <label htmlFor="name">Company Name</label><br/>
-      <input type="text" id="name" name="name"/><br/><br/>
+      <input type="text" id="dynvar_exp_company" name="name"/><br/><br/>
       <label htmlFor="name">Starting Date</label><br/>
-      <input type="text" id="name" name="name"/><br/><br/>
+      <input type="text" id="dynvar_exp_startdate" name="name"/><br/><br/>
       <label htmlFor="name">Ending Date</label><br/>
-      <input type="text" id="name" name="name"/><br/><br/>
+      <input type="text" id="dynvar_exp_enddate" name="name"/><br/><br/>
       <label htmlFor="name">Details</label><br/>
-      <input type="text" id="name" name="name"/><br/><br/>
+      <input type="text" id="dynvar_exp_details" name="name"/><br/><br/>
       
       </>
 
@@ -210,9 +210,9 @@ function Unit_Skills(props) {
       <br/>
       <h6><strong>Tell me about a skill of yours! (Skill {props.no+1})</strong></h6>
       <label htmlFor="name">Skill Name</label><br/>
-      <input type="text" id="name" name="name"/><br/><br/>
+      <input type="text" id="dynvar_skill_name" name="name"/><br/><br/>
       <label htmlFor="name">Your Level</label><br/>
-      <input type="text" id="name" name="name"/><br/><br/>
+      <input type="text" id="dynvar_skill_level" name="name"/><br/><br/>
 
       </>
 

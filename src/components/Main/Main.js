@@ -5,12 +5,14 @@ import Interwork from './Mycomponents/Interwork';
 import InteractiveBlock from './Mycomponents/InteractiveBlock';
 
 
+
 function Main({domain})
 {    
+
     return(
     <>
     <h1 className="header center red-text" id="catTitle">Resume.cat 🐈</h1>
-    <p className="center black-text">I will help you create you a <strong>real</strong> resume step by step!</p> 
+    <p className="center black-text">I will help you create you a <strong>real</strong> resume step-by-step!</p> 
     <br/>
     <div className = "inputzone">
         <InteractiveBlock type="personal"/>
@@ -21,7 +23,6 @@ function Main({domain})
         
     </div>
         <br/>
-        <button>Create my resume!</button>
 
         {/* <form onSubmit={formSubmit}>
         
@@ -50,6 +51,9 @@ function Main({domain})
         
     )
 }
+
+
+
 
 export default Main;
 
