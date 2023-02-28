@@ -16,11 +16,11 @@ function Intro({ data }) {
 
                 <div className='col left-align s12 valign-wrapper'>
                         <i className="tiny material-icons icon">email</i>
-                        <a>{data.email}&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                        <a href={`mailto:`+data.email}>{data.email}&nbsp;&nbsp;&nbsp;&nbsp;</a>
                         <i className="tiny material-icons icon">phone</i>
                         <a>{data.phone}&nbsp;&nbsp;&nbsp;&nbsp;</a>
                         <i className="tiny material-icons icon">open_in_new</i>
-                        <a className=''>{data.url}</a>
+                        <a href={data.url}>{data.url}</a>
                 </div>
 
                 <div className='socials col s12 left-align'>
