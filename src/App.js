@@ -45,7 +45,7 @@ function App() {
        "endDate": "2014-01-01",
        "summary": "Description…",
        "highlights": [
-         "Started the company"
+         "I CHANGED SOMETHING Started the company"
        ]
      }],
      "volunteer": [{
