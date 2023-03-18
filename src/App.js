@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import {jsPDF} from 'jspdf';
 import './App.css';
 import Awards from './Components/Awards/Awards';
 import Intro from './Components/Intro/Intro';
@@ -9,6 +10,13 @@ import WorkExperience from './Components/WorkExperience/WorkExperience';
 import Education from './Components/Education/Education';
 
 function App() {
+
+  function SaveToPDF() {
+    const resume = new jsPDF('portrait','pt','a4', false, false, 2, 0.5);
+    resume.html(document.querySelector('#resume')).then(() => {
+      resume.save('resume.pdf');
+    });
+  }
 
   function inputToJson() {
     let myVar =  document.getElementById("dynval_name").value;
@@ -166,12 +174,12 @@ function App() {
         <div className='col s5 leftArea'>
           <div className="Main">
             <Main />
-            <button onClick={()=>{inputToJson()}}>Create my resume!</button>
+            <button onClick={()=>{SaveToPDF()}}>Save my resume!</button>
             {setInterval(inputToJson, 100)}
           </div>
         </div>
 
-        <div className='col s7 white' >
+        <div id="resume" className='col s7 white' >
           <Intro data={jsonData.basics} />
           <Skills data={jsonData.skills} />
           <WorkExperience data={jsonData.work} />
