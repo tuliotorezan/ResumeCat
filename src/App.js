@@ -30,30 +30,30 @@ function App() {
        "image": "",
        "email": document.getElementById("dynval_email").value,
        "phone": document.getElementById("dynval_phone").value,
-       "url": "https://johndoe.com",
+       "url": document.getElementById("dynval_website").value,
        "summary": document.getElementById("dynval_desc").value,
        "location": {
-         "address": "",
-         "postalCode": "",
+         "address": "baban",
+         "postalCode": "anan1",
          "city": document.getElementById("dynval_address").value,
-         "countryCode": "",
-         "region": ""
+         "countryCode": "anan2",
+         "region": document.getElementById("dynval_state").value
        },
        "profiles": [{
-         "network": "Twitter",
-         "username": "john",
-         "url": "https://twitter.com/john"
+         "network": "",
+         "username": "",
+         "url": ""
        }]
      },
      "work": [{
-       "name": "Company",
-       "position": "President",
-       "url": "https://company.com",
-       "startDate": "2013-01-01",
-       "endDate": "2014-01-01",
-       "summary": "Description…",
+       "name":document.getElementById("dynvar_exp_company").value,
+       "position": document.getElementById("dynvar_exp_position").value,
+       "url": "",
+       "startDate": document.getElementById("dynvar_exp_startdate").value,
+       "endDate": document.getElementById("dynvar_exp_enddate").value,
+       "summary": document.getElementById("dynvar_exp_details").value,
        "highlights": [
-         "I CHANGED SOMETHING Started the company"
+        document.getElementById("dynvar_exp_highlight").value,
        ]
      }],
      "volunteer": [{
@@ -175,7 +175,7 @@ function App() {
           <div className="Main">
             <Main />
             <button onClick={()=>{SaveToPDF()}}>Save my resume!</button>
-            {setInterval(inputToJson, 100)}
+            {setInterval(inputToJson, 500)}
           </div>
         </div>
 

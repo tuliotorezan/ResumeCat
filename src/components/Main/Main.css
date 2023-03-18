@@ -1,70 +1,75 @@
-body {
-    background-color: #ccd3db;
+html {
+  font-family: 'Roboto', sans-serif;
+}
 
+body {
+  background-color: #5D755B;
+  font-family: 'Roboto', sans-serif;
 }
 
 #catTitle {
   font-family: 'Lilita One', cursive;
+  text-shadow: 2px 2px black;
 }
 
 .inputzone {
-  font-family: 'Lilita One', cursive;
-    /* font-family: 'Share Tech Mono', monospace; */
+  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Share Tech Mono', monospace; */
 }
 
 label {
-    font-size: 1.3rem;
-    color: black;
+  font-size: 1.3rem;
+  color: black;
 }
 
 ::placeholder {
-    color: rgba(34, 46, 137, 0.5);
-    opacity: 1;
-  }
+  color: rgba(34, 46, 137, 0.5);
+  opacity: 1;
+}
 
 
-  button {
-    text-align: center;
-    margin: auto;
-  }
+button {
+  text-align: center;
+  margin: auto;
+}
 
-  /* Boxes and Colours */
-    .basicBox {
-      padding: 10px;
-    }
+/* Boxes and Colours */
+.basicBox {
+  padding: 10px;
+}
 
-    #nameBox {
-      background-color: #D4CAB1;
-    }
+#nameBox {
+  background-color: #D4CAB1;
+}
 
-    #titleBox {
-      background-color: #E17D5A;
-    }
+#titleBox {
+  background-color: #E17D5A;
+}
 
-    #addressBox {
-      background-color: #D4CAB1;
-    }
+#addressBox {
+  background-color: #D4CAB1;
+}
 
-    #mailBox {
-      background-color: #E17D5A;
-    }
+#mailBox {
+  background-color: #E17D5A;
+}
 
-    #phoneBox {
-      background-color: #D4CAB1;
-    }
+#phoneBox {
+  background-color: #D4CAB1;
+}
 
-    #siteBox {
-      background-color: #E17D5A;
-    }
+#siteBox {
+  background-color: #E17D5A;
+}
 
-    #descBox {
-      background-color: #B5A157;
-    }
+#descBox {
+  background-color: #B5A157;
+}
 
-    #eduBox {
-      background-color: #B5A157;
-    }
+#eduBox {
+  background-color: #B5A157;
+}
 
-    #workBox {
-      background-color: #B5A157;
-    }
+#workBox {
+  background-color: #B5A157;
+}
